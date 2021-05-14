@@ -12,12 +12,13 @@ namespace _61
 
             bool gameover = false;
             Console.WriteLine("Odganij liczbę od 1 do 100.");
+            int user;
             int guess = 0;
-            while (gameover == false)
+            do
             {
                 guess++;
 
-                int user = int.Parse(Console.ReadLine());
+                user = int.Parse(Console.ReadLine());
 
                 if (user == num)
                 {
@@ -31,9 +32,12 @@ namespace _61
                 {
                     Console.WriteLine("Liczba zbyt mała spróbuj ponownie.");
                 }
-                Console.WriteLine($"Potrzebowałeś {guess} prób.");
-            }
+
+            } while (num != user);
+               
+               
             
+            Console.WriteLine($"Potrzebowałeś {guess} prób.");
         }
     }
 }
